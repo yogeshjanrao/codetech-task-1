@@ -13,7 +13,12 @@ public class HelloWorldController {
     private HelloWorldService helloWorldService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String sayHelloWorld(){
+    public String sayHelloWorld() {
+        return helloWorldService.sayHelloWorld();
+    }
+
+    @RequestMapping(value = "/hello-world", method = RequestMethod.GET)
+    public String helloWorld() {
         return helloWorldService.sayHelloWorld();
     }
 
